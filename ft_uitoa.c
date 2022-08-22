@@ -6,7 +6,7 @@
 /*   By: taboterm <taboterm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 18:52:40 by taboterm          #+#    #+#             */
-/*   Updated: 2022/08/22 12:44:28 by taboterm         ###   ########.fr       */
+/*   Updated: 2022/08/22 15:03:21 by taboterm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,3 @@ int	ft_uitoa(unsigned long int n)
 	free(nbr);
 	return (len);
 }
-
-// int main()
-// {
-// 	unsigned long int n = 968496938;
-// 	ft_uitoa(n);
-// }

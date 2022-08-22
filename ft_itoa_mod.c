@@ -6,7 +6,7 @@
 /*   By: taboterm <taboterm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 16:51:41 by taboterm          #+#    #+#             */
-/*   Updated: 2022/08/22 11:50:43 by taboterm         ###   ########.fr       */
+/*   Updated: 2022/08/22 14:59:43 by taboterm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,7 @@ int	ft_itoa_mod(int n, int i, long int num)
 	num = (long int)n;
 	i = ft_len(n) - 1;
 	str = (char *)calloc(sizeof(char), (i + 1));
-    // if (!str)
-    //     return (0);
-    str[i + 1] = '\0';
+	str[i + 1] = '\0';
 	if (num < 0)
 	{
 		str[0] = '-';

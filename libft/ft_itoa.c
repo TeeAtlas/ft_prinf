@@ -6,7 +6,7 @@
 /*   By: taboterm <taboterm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 16:51:41 by taboterm          #+#    #+#             */
-/*   Updated: 2022/08/19 20:47:18 by taboterm         ###   ########.fr       */
+/*   Updated: 2022/08/22 15:05:32 by taboterm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_diglen(int n)
 
 	i = 0;
 	if (n == 0)
-		return 1;
+		return (1);
 	while (n != 0)
 	{
 		n /= 10;
@@ -59,8 +59,8 @@ char	*ft_itoa(int n)
 	return (str);
 }
 
-int	main()
-{
-	int n = -9907897;
-	ft_itoa(n);
-}
+// int	main()
+// {
+// 	int n = -9907897;
+// 	ft_itoa(n);
+// }

@@ -6,7 +6,7 @@
 /*   By: taboterm <taboterm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/21 17:10:04 by taboterm          #+#    #+#             */
-/*   Updated: 2022/08/22 13:51:43 by taboterm         ###   ########.fr       */
+/*   Updated: 2022/08/22 15:03:14 by taboterm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,3 @@ int	ft_puthex(long n, char *base, int base_len)
 		i += write(1, &base[n], 1);
 	return (i);
 }
-
-// int	main()
-// {   
-// 	int i = ft_printf("%x %x %x %x %x", 0, 40, -23, -2147483647, 7);
-// 	ft_printf("\n");
-// 	printf("%d\n", i);
-// }

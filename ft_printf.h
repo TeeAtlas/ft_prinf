@@ -6,7 +6,7 @@
 /*   By: taboterm <taboterm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 15:24:52 by taboterm          #+#    #+#             */
-/*   Updated: 2022/08/22 13:40:03 by taboterm         ###   ########.fr       */
+/*   Updated: 2022/08/22 15:02:59 by taboterm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,5 @@ int			ft_percent(void);
 int			ft_print_ptr(unsigned long long ptr);
 void		ft_pointer(unsigned long int num);
 int			ft_pt_len(unsigned long int addi);
-// void		ft_putchar_fd(char c, int fd);
 
 #endif
