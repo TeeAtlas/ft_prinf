@@ -6,11 +6,31 @@
 /*   By: taboterm <taboterm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 18:52:40 by taboterm          #+#    #+#             */
-/*   Updated: 2022/08/22 18:03:03 by taboterm         ###   ########.fr       */
+/*   Updated: 2022/08/24 19:19:42 by taboterm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+int	ft_len(long int n)
+{
+	int	i;
+
+	i = 0;
+	if (n == 0)
+		return (i + 1);
+	if (n < 0)
+	{
+		n *= (-1);
+		i++;
+	}
+	while (n > 0)
+	{
+		n /= 10;
+		i++;
+	}
+	return (i);
+}
 
 int	ft_uitoa(unsigned long int n)
 {
@@ -26,7 +46,7 @@ int	ft_uitoa(unsigned long int n)
 	nbr[len] = '\0';
 	while (n != 0)
 	{
-		nbr[len - 1] = n % 10 + 48;
+		nbr[len - 1] = n % 10 + '0';
 		n = n / 10;
 		len--;
 	}	

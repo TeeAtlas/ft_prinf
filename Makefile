@@ -6,14 +6,14 @@
 #    By: taboterm <taboterm@student.42wolfsburg.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/17 14:14:16 by taboterm          #+#    #+#              #
-#    Updated: 2022/08/22 18:04:59 by taboterm         ###   ########.fr        #
+#    Updated: 2022/08/24 19:15:29 by taboterm         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
-SRC = ft_printf.c ft_printstr.c ft_printchar.c ft_uitoa.c ft_itoa_mod.c \
-	ft_puthex.c ft_printptr.c
+SRC = ft_printf.c ft_printstr.c ft_printchar.c ft_uitoa.c\
+	ft_putnum_mod.c ft_printptr.c
 
 OBJS = $(SRC:.c=.o)
 
@@ -23,17 +23,14 @@ CFLAGS = -c -Wall -Wextra -Werror
 INCLUDE = ft_printf.h
 
 $(NAME): $(OBJS)
-	make -C ./libft
 	ar rcs $(NAME) $(OBJS)
 
 all: $(NAME)
 
 clean:
-	make clean -C ./libft
 	/bin/rm -f *.o a.out
 
 fclean: clean
-	make fclean -C ./libft
 	/bin/rm -f *.o a.out $(NAME)
 
 re: fclean all

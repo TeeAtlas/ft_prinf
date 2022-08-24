@@ -6,7 +6,7 @@
 /*   By: taboterm <taboterm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 16:42:26 by taboterm          #+#    #+#             */
-/*   Updated: 2022/08/24 15:47:08 by taboterm         ###   ########.fr       */
+/*   Updated: 2022/08/24 19:07:54 by taboterm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ int	ft_conversion(va_list args, const char flag)
 	else if (flag == 'u')
 		len += ft_uitoa(va_arg(args, unsigned int));
 	else if (flag == 'i' || flag == 'd')
-		len += ft_itoa_mod(va_arg(args, int), 0, 0);
+			len += ft_putnum_mod(va_arg(args, int), "0123456789", 10);
 	else if (flag == 'x')
-		len += ft_puthex(va_arg(args, unsigned int), "0123456789abcdef", 16);
+		len += ft_putnum_mod(va_arg(args, unsigned int), "0123456789abcdef", 16);
 	else if (flag == 'X')
-		len += ft_puthex(va_arg(args, unsigned int), "0123456789ABCDEF", 16);
+		len += ft_putnum_mod(va_arg(args, unsigned int), "0123456789ABCDEF", 16);
 	else if (flag == 'p')
 		len += ft_printptr(va_arg(args, unsigned long long));
 	else if (flag == '%')

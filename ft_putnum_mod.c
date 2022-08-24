@@ -1,29 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_puthex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: taboterm <taboterm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/29 17:14:53 by taboterm          #+#    #+#             */
-/*   Updated: 2022/05/18 14:53:00 by taboterm         ###   ########.fr       */
+/*   Created: 2022/08/21 17:10:04 by taboterm          #+#    #+#             */
+/*   Updated: 2022/08/24 18:35:28 by taboterm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-int	ft_isalnum(int c)
+int	ft_putnum_mod(long n, char *base, int base_len)
 {
-	if (ft_isdigit(c) || ft_isalpha(c))
-		return (1);
-	else
-		return (0);
-}
+	int			i;
 
-// int	main(void)
-// {
-// 	int temp; //must call a temp int for the value to be placed
-// 	temp = ft_isalnum('9'); //executing fuction, int does not have to be called
-// 	printf("%d\n", temp);
-// 	return(0);
-// }
+	i = 0;
+	if (n < 0)
+	{
+		i += write(1, "-", 1);
+		n = -(n);
+	}
+	if (n == 0)
+	{
+		return (write(1, "0", 1), i + 1);
+	}
+	if (n >= base_len)
+	{
+		i += ft_putnum_mod(n / base_len, base, base_len);
+		i += write(1, &base[n % base_len], 1);
+	}
+	else if (n < base_len)
+		i += write(1, &base[n], 1);
+	return (i);
+}
