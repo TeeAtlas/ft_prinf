@@ -6,7 +6,7 @@
 /*   By: taboterm <taboterm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 16:51:41 by taboterm          #+#    #+#             */
-/*   Updated: 2022/08/22 14:59:43 by taboterm         ###   ########.fr       */
+/*   Updated: 2022/08/24 15:42:58 by taboterm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ int	ft_itoa_mod(int n, int i, long int num)
 	check = 0;
 	num = (long int)n;
 	i = ft_len(n) - 1;
-	str = (char *)calloc(sizeof(char), (i + 1));
-	str[i + 1] = '\0';
+	str = (char *)ft_calloc(sizeof(char), (i + 2));
+	str[i + 2] = '\0';
 	if (num < 0)
 	{
 		str[0] = '-';
@@ -58,17 +58,3 @@ int	ft_itoa_mod(int n, int i, long int num)
 	free(str);
 	return (ft_len(n));
 }
-
-// int main()
-// {
-//     long int x = -2147483649;
-//     printf(" Ret:%d\n",ft_itoa_mod(x));
-// }
-
-// int    main(void)
-// {
-//     int n;
-//     n = -56;
-//     ft_itoa_mod(n);
-//     // printf("%i", ft_itoa_mod(n));
-// }

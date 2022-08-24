@@ -6,7 +6,7 @@
 /*   By: taboterm <taboterm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 15:24:52 by taboterm          #+#    #+#             */
-/*   Updated: 2022/08/22 15:02:59 by taboterm         ###   ########.fr       */
+/*   Updated: 2022/08/23 17:48:46 by taboterm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,8 @@ int			ft_uitoa(unsigned long int n);
 int			ft_itoa_mod(int n, int i, long int num);
 int			ft_printstr(char *s);
 int			ft_puthex(long n, char *base, int base_len);
-int			ft_percent(void);
-int			ft_print_ptr(unsigned long long ptr);
-void		ft_pointer(unsigned long int num);
+int			ft_printptr(unsigned long long ptr);
 int			ft_pt_len(unsigned long int addi);
+void		*ft_calloc(size_t count, size_t size);
 
 #endif

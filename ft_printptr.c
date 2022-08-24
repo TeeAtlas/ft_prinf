@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_ptr.c                                     :+:      :+:    :+:   */
+/*   ft_printptr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: taboterm <taboterm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/21 18:42:48 by taboterm          #+#    #+#             */
-/*   Updated: 2022/08/21 22:03:36 by taboterm         ###   ########.fr       */
+/*   Updated: 2022/08/23 12:16:11 by taboterm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	ft_pointer(unsigned long int num)
 	}
 }
 
-int	ft_print_ptr(unsigned long long ptr)
+int	ft_printptr(unsigned long long ptr)
 {
 	int	len;
 
@@ -68,10 +68,3 @@ int	ft_print_ptr(unsigned long long ptr)
 	}
 	return (len);
 }
-
-// int	main()
-// {
-// 	int ptr = 12;
-// 	ft_printptr(ptr);
-// 	// printf("\n%p\n", ptr);
-// }
